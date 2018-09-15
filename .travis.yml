@@ -3,10 +3,10 @@ services:
  - docker
 
 before_install:
- - docker build -t muzammilmomin/docker-react -f Dockerfile.dev .
+ - docker build -t muzammilmomin/docker-react .
 
 script:
- - docker run -p 80:80 -d muzammilmomin/docker-react 
+ - docker run -d muzammilmomin/docker-react 
  
 deploy:
  provider: elasticbeanstalk
